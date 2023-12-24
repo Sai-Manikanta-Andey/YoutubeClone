@@ -1,19 +1,42 @@
-import React from 'react'
-import './App.css'
-import Head from './components/Head'
-import Body from './components/Body'
-import { Provider } from 'react-redux'
-import store from './utils/store'
+import React from "react";
+import "./App.css";
+import Head from "./components/Head";
+import Body from "./components/Body";
+import { Provider } from "react-redux";
+import store from "./utils/store";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import VideoContainer from "./components/VideoContainer";
+import MainContainer from "./components/MainContainer";
+import WatchPage from "./components/WatchPage";
+
+const appRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: <Body />,
+    children: [
+      {
+        path: "/",
+        element: <MainContainer />,
+      },
+      {
+        path: "/watch",
+        element: <WatchPage />,
+      },
+    ],
+  },
+]);
 
 const App = () => {
   return (
     <Provider store={store}>
-      <div>
+      <div className="mx-auto ">
         <Head />
-        <Body />
+        <RouterProvider router={appRouter}>
+          <Body />
+        </RouterProvider>
       </div>
     </Provider>
   );
-}
+};
 
-export default App
+export default App;

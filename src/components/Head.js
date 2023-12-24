@@ -13,8 +13,8 @@ const Head = () => {
   };
 
   return (
-    <div className="flex justify-between items-center p-4 shadow-md">
-      <div className="flex gap-4 items-center">
+    <div className="flex items-center justify-between p-4 ">
+      <div className="flex items-center gap-4">
         <LuMenu
           fontSize={25}
           className="cursor-pointer "
@@ -22,7 +22,7 @@ const Head = () => {
         />
         <img src="logo.png" alt="logo" width={120} />
       </div>
-      <div className="flex justify-between items-center gap-4 border-2 border-gray-400 rounded-3xl p-2 lg:w-4/12">
+      <div className="flex items-center justify-between gap-4 p-2 border-2 border-gray-400 rounded-3xl lg:w-4/12">
         <input
           type="text"
           placeholder="Search"
