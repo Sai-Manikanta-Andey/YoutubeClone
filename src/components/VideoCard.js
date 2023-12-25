@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const VideoCard = ({ info }) => {
   const { snippet, statistics } = info || [];
   const { channelTitle, title, thumbnails } = snippet ?? [];
-  console.log(info);
+  
+
+
+
+  
   return (
     <div className="w-[340px]">
       <div>
