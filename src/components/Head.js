@@ -26,8 +26,7 @@ const Head = () => {
     const data = await response.json();
     setSuggestions(data[1]);
     dispatch(cachedResults({ [searchQuery]: [...data[1]] }));
-    // console.log(searchQuery);
-    // console.log(suggestions);
+   
   };
 
   //
