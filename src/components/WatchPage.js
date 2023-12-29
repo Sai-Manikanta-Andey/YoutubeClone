@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux'
 import { closeMenu } from '../utils/appSlice'
 import {  useSearchParams } from 'react-router-dom'
 import CommentsContainer from './CommentsContainer'
+import LiveChat from './LiveChat'
 
 const WatchPage = () => {
   const [searchParam] = useSearchParams()
@@ -10,12 +11,12 @@ const WatchPage = () => {
   const dispatch= useDispatch()
   useEffect(()=>{
     dispatch(closeMenu())
-  })
+  }) 
 
   return (
-    <div className="px-20 py-4">
-      <div>
-        <div>
+    <div className="px-20 py-4 mx-auto ">
+      <div className='flex gap-8'>
+        <div >
           <iframe
             className="rounded-xl"
             width="850"
@@ -28,6 +29,7 @@ const WatchPage = () => {
           ></iframe>
         </div>
         {/* recommended videos */}
+        <LiveChat/>
         <div></div>
       </div>
       {/* comments container */}

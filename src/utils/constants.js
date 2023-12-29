@@ -4,3 +4,6 @@ export const YOUTUBE_API =
   API_KEY; ;
 
 export const YOUTUBE_SUGGESTION_API="http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q="
+
+export const YOUTUBE_LIVE_CHAT_API =
+  "https://youtube.googleapis.com/youtube/v3/liveChat/messages?key="+API_KEY;
