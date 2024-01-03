@@ -4,6 +4,7 @@ import { closeMenu } from '../utils/appSlice'
 import {  useSearchParams } from 'react-router-dom'
 import CommentsContainer from './CommentsContainer'
 import LiveChat from './LiveChat'
+import SubscriptionBox from './SubscriptionBox'
 
 const WatchPage = () => {
   const [searchParam] = useSearchParams()
@@ -27,6 +28,9 @@ const WatchPage = () => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
           ></iframe>
+          <div>
+            <SubscriptionBox id={searchParam.get('v')} />
+          </div>
         </div>
         {/* recommended videos */}
         <LiveChat/>

@@ -1,9 +1,10 @@
 import React from "react";
 import { CgProfile } from "react-icons/cg";
+import Replies from "./Replies";
 
 
 const Comments = ({ data }) => {
-  const { name, text, replies} = data;
+  const { name, text, replies } = data;
   return (
     <div>
       <div className="flex gap-2 ">
@@ -17,7 +18,7 @@ const Comments = ({ data }) => {
           <div className="text-[15px]">{text} </div>
           <div className="pt-2 ">
             {replies.map((data) => (
-              <Comments data={data} key={data.id} />
+              <Replies data={data} key={data.id}/>
             ))}
           </div>
         </div>

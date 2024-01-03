@@ -16,8 +16,15 @@ const CommentsContainer = () => {
             {
               id: 3,
               name: "SMK007",
-              text: "SO beautiful so elegant",
-              replies: [],
+              text: "Just looking like a wow",
+              replies: [
+                {
+                  id: 8,
+                  name: "SMK007",
+                  text: "🚀",
+                  replies: [],
+                },
+              ],
             },
           ],
         },
@@ -26,18 +33,18 @@ const CommentsContainer = () => {
     {
       id: 4,
       name: "Sai Manikanta Andey",
-      text: "Awesome",
+      text: "Sup",
       replies: [],
     },
     {
       id: 5,
       name: "Sai Manikanta Andey",
-      text: "Awesome",
+      text: "Good",
       replies: [],
     },
-    { id: 6, name: "Sai Manikanta Andey", text: "Awesome", replies: [] },
-    
-    { id: 7, name: "Sai Manikanta Andey", text: "Awesome", replies: [] },
+    { id: 6, name: "Sai Manikanta Andey", text: "Super", replies: [] },
+
+    { id: 7, name: "Sai Manikanta Andey", text: "Nice one", replies: [] },
   ];
   return (
     <div className="flex flex-col gap-4">

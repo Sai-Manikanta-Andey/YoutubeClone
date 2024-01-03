@@ -30,7 +30,7 @@ const LiveChat = () => {
               <ChatMessage
                 name={msg.name}
                 message={msg.message}
-                key={Date.now()}
+                key={Math.random()}
               />
             ))}
             <ChatMessage name={"sai"} message={"Jai Shri Ram"} />

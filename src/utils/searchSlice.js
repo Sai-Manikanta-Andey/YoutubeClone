@@ -7,7 +7,7 @@ const searchSlice = createSlice({
     },
     reducers:{
         cachedResults:(state,action)=>{
-            console.log(action.payload);
+         
             return { ...state,...action.payload,}
         }
     }
