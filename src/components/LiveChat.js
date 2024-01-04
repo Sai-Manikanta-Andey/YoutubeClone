@@ -18,7 +18,11 @@ const LiveChat = () => {
   }, []);
 
   return (
-    <div className=" border  rounded-xl md:w-[400px]">
+    <div
+      className={`border rounded-xl md:w-[400px] ${
+        showChat ? "max-h-[570px]" : "max-h-[70px]"
+      }`}
+    >
       {showChat && (
         <div>
           <div>

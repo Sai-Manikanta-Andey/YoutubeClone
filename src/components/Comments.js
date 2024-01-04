@@ -6,7 +6,7 @@ import Replies from "./Replies";
 const Comments = ({ data }) => {
   const { name, text, replies } = data;
   return (
-    <div>
+    <div >
       <div className="flex gap-2 ">
         <div>
           <CgProfile fontSize={30} />

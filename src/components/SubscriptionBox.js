@@ -8,6 +8,8 @@ const SubscriptionBox = (videoId) => {
   const presentVideo = videos.find((video) => video.id === videoId.id);
   console.log(presentVideo);
   console.log(videoId);
+  const [showDescription,setshowDescription]=useState(false)
+  
   const getVideos = async () => {
     const response = await fetch(YOUTUBE_API);
     const data = await response.json();
@@ -17,16 +19,16 @@ const SubscriptionBox = (videoId) => {
     getVideos();
   }, []);
   return (
-    <div className="mt-4 ">
+    <div className="mt-4 max-w-[850px] m-auto">
       <div>
         <h3 className="text-xl font-semibold">
           {presentVideo?.snippet?.title}
         </h3>
       </div>
-      <div className="mt-4 flex items-center justify-between">
+      <div className="flex items-center justify-between my-4">
         <div className="flex gap-4">
           {/* profile of youtuber */}
-          <div className="flex gap-2 justify-between ">
+          <div className="flex justify-between gap-2 ">
             <div>
               <img
                 width={50}
@@ -46,7 +48,7 @@ const SubscriptionBox = (videoId) => {
 
           {/* subscribe */}
           <div>
-            <button className="bg-black text-white px-3 py-2 rounded-3xl text-base  font-semibold">
+            <button className="px-3 py-2 text-base font-semibold text-white bg-black rounded-3xl">
               Subscribe
             </button>
           </div>
@@ -55,13 +57,16 @@ const SubscriptionBox = (videoId) => {
         <div className="flex gap-2">
           {/* like and dislike */}
           <div className="flex bg-gray-100 rounded-3xl">
-            <div>
+            <div className="flex items-center pr-3 border-r">
               <img
                 src="like.svg"
                 alt="like"
                 width={60}
                 className=" rounded-xl w-[44px] hover:bg-gray-200 hover:rounded-3xl"
               />
+              <span className="text-sm">
+                {Math.floor(presentVideo?.statistics.likeCount / 1000) + "K"}{" "}
+              </span>
             </div>
             <div>
               <img
@@ -74,7 +79,7 @@ const SubscriptionBox = (videoId) => {
           </div>
 
           {/* share */}
-          <div className="flex gap-0 items-center bg-gray-100 rounded-3xl px-2 hover:bg-gray-200">
+          <div className="flex items-center gap-0 px-2 bg-gray-100 rounded-3xl hover:bg-gray-200">
             <img
               src="share.svg"
               alt="share"
@@ -85,8 +90,21 @@ const SubscriptionBox = (videoId) => {
           </div>
 
           {/* download */}
-          <div className="bg-gray-100 rounded-3xl px-3 flex justify-center items-center">Download</div>
+          <div className="flex items-center justify-center px-3 bg-gray-100 cursor-pointer rounded-3xl hover:bg-gray-200">
+            Download
+          </div>
         </div>
+      </div>
+      {/* description */}
+      <div className="mt-4 bg-gray-100 rounded-3xl" onClick={()=>setshowDescription(prev => !prev)}>
+        <p className="p-4">
+          
+          {showDescription
+            ?presentVideo?.snippet?.description 
+            : presentVideo?.snippet?.description.slice(
+                presentVideo?.snippet?.description
+              .length/2)+"...."}
+        </p>
       </div>
     </div>
   );

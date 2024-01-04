@@ -47,7 +47,7 @@ const CommentsContainer = () => {
     { id: 7, name: "Sai Manikanta Andey", text: "Nice one", replies: [] },
   ];
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 mt-4">
       <h2 className="text-xl font-bold">Comments</h2>
       {commentData.map((comment) => (
         <Comments data={comment} key={comment.id} />
