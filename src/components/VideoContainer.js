@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const VideoContainer = () => {
    const [videos, setVideos] = useState([]);
-  console.log(videos);
+ 
   const getVideos = async () => {
     const response = await fetch(YOUTUBE_API);
     const data = await response.json();

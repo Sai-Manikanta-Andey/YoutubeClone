@@ -6,8 +6,7 @@ const SubscriptionBox = (videoId) => {
   const [videos, setVideos] = useState([]);
   const { id, snippet } = videos;
   const presentVideo = videos.find((video) => video.id === videoId.id);
-  console.log(presentVideo);
-  console.log(videoId);
+  
   const [showDescription,setshowDescription]=useState(false)
   
   const getVideos = async () => {
