@@ -4,7 +4,7 @@ import { YOUTUBE_API } from "../utils/constants";
 
 const SubscriptionBox = (videoId) => {
   const [videos, setVideos] = useState([]);
-  const { id, snippet } = videos;
+  
   const presentVideo = videos.find((video) => video.id === videoId.id);
   
   const [showDescription,setshowDescription]=useState(false)

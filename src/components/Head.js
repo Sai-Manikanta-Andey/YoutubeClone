@@ -12,7 +12,7 @@ const Head = () => {
   const [suggestions, setSuggestions] = useState([]);
   const [showSuggestions, setshowSuggestions] = useState(false);
   const searchCache = useSelector((store) => store.search);
-
+  console.log(suggestions);
   const dispatch = useDispatch();
 
   const toggleMenuHandler = () => {
@@ -68,7 +68,7 @@ const Head = () => {
         {showSuggestions && searchQuery && (
           <div className="absolute left-0 w-full py-4 bg-white shadow shadow-slate-500 rounded-xl top-12">
             <ul className="flex flex-col ">
-              {suggestions.map((suggestion) => (
+              {suggestions?.map((suggestion) => (
                 <li
                   key={suggestion}
                   className="flex items-center w-full gap-4 p-2 hover:bg-gray-100"

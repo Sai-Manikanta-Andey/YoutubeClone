@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React  from "react";
 
 const VideoCard = ({ info }) => {
   const { snippet, statistics } = info || [];

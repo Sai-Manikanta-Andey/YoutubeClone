@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ChatMessage from "./ChatMessage";
-import { YOUTUBE_LIVE_CHAT_API } from "../utils/constants";
+
 import { useDispatch, useSelector } from "react-redux";
 import { addMessage } from "./ChatSlice";
 
