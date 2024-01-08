@@ -19,9 +19,6 @@ const WatchPage = () => {
     dispatch(closeMenu())
   }) 
 
-
-     
-    
      const getVideos = async () => {
        const response = await fetch(YOUTUBE_API);
        const data = await response.json();
