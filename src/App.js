@@ -28,7 +28,7 @@ const appRouter = createBrowserRouter([
 const App = () => {
   return (
     <Provider store={store}>
-      <div className="mx-auto ">
+      <div className="mx-auto overflow-hidden">
         <Head />
         <RouterProvider router={appRouter}>
           <Body />
