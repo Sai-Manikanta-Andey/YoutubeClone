@@ -100,7 +100,7 @@ const SubscriptionBox = (videoId) => {
           
           {showDescription
             ?presentVideo?.snippet?.description 
-            : presentVideo?.snippet?.description.slice(
+            : presentVideo?.snippet?.description.slice(0,
                 presentVideo?.snippet?.description
               .length/2)+"...."}
         </p>

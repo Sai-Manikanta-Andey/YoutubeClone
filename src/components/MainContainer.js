@@ -6,7 +6,7 @@ const MainContainer = () => {
   
   return (
     <div className='px-4'>
-        <ButtonList/>
+        {/* <ButtonList/> */}
         <VideoContainer/>
     </div>
   )

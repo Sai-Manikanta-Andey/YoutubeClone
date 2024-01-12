@@ -30,11 +30,11 @@ const ButtonList = () => {
   }
 
   return (
-    <div className="relative flex items-center gap-4 px-3">
+    <div className="relative flex items-center gap-4 px-3 overflow-hidden">
       <button onClick={slideLeft}>◀️</button>
       <div
         id="slider"
-        className="flex w-full h-full gap-2 overflow-x-scroll whitespace-nowrap scroll-smooth"
+        className="flex gap-2 overflow-x-hidden whitespace-nowrap scroll-smooth"
       >
         {arr.map((btn) => (
           <Button name={btn} key={btn} />
