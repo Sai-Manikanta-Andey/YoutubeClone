@@ -66,7 +66,7 @@ const Head = () => {
           <CiSearch fontSize={20} />
         </button>
         {showSuggestions && searchQuery && (
-          <div className="absolute left-0 w-full py-4 bg-white shadow shadow-slate-500 rounded-xl top-12">
+          <div className="absolute left-0 z-10 w-full py-4 bg-white shadow shadow-slate-500 rounded-xl top-12">
             <ul className="flex flex-col ">
               {suggestions?.map((suggestion) => (
                 <li

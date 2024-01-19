@@ -72,7 +72,7 @@ const SubscriptionBox = (videoId) => {
                 src="like.svg"
                 alt="dislike"
                 width={60}
-                className="rotate-180 w-[44px] hover:bg-gray-200 hover:rounded-3xl"
+                className="rotate-180 w-[44px] hover:bg-gray-200 hover:rounded-3xl -z-10"
               />
             </div>
           </div>
